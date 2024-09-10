@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Pagina</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-blue-50 flex items-center justify-center min-h-screen">
+    <div class="w-full max-w-sm bg-white rounded-lg shadow-md p-8">
+        <!-- Logo Section -->
+        <div class="flex justify-center mb-12">
+            <img src="Logo_rijksoverheid.svg.png" alt="Logo" class="h-24">
+        </div>
+        
+        <!-- Title -->
+        <h1 class="text-center text-2xl font-semibold text-gray-800 mb-8">Uw leerreis begint hier</h1>
+        
+        <!-- Form Section -->
+        <form>
+            <!-- Email Field -->
+            <div class="relative mb-6">
+                <input type="email" placeholder="Voer je email in" class="w-full px-4 py-2 text-sm text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                    <svg class="h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12H8m8 4H8m8-8H8m8-4H8m4 16v-8m0 0l-4 4m4-4l4 4" />
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Password Field -->
+            <div class="relative mb-6">
+                <input type="password" placeholder="********" class="w-full px-4 py-2 text-sm text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                    <svg class="h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Remember Me and Forgot Password -->
+            <div class="flex items-center justify-between mb-6">
+                <div class="flex items-center">
+                    <input id="remember_me" type="checkbox" class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded">
+                    <label for="remember_me" class="ml-2 text-sm text-gray-700">Onthouden</label>
+                </div>
+                <a href="#" class="text-sm text-blue-600 hover:underline">wachtwoord vergeten?</a>
+            </div>
+
+            <!-- Login Button -->
+            <button type="submit" class="w-full py-2 px-4 text-white bg-blue-600 rounded-md shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 text-sm font-medium">
+                LOG IN
+            </button>
+        </form>
+    </div>
+</body>
+</html>
