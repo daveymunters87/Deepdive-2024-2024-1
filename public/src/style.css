@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+.press-start-2p-regular {
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+.progress-bar {
+    background: conic-gradient(#01689B 0deg 246deg, transparent 246deg)
+}
+
+.hero-banner {
+    background-image: url(https://cdnb.artstation.com/p/assets/images/images/056/671/273/large/sarah-hennig-skyline.jpg?1669821740?auto=compress&cs=tinysrgb&h=750&w=1260);
+}
