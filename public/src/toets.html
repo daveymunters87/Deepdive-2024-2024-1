@@ -7,6 +7,7 @@
     <title>Nav EN Footer</title>
     <link href="../dist/output.css" rel="stylesheet">
     <link rel="shortcut icon" href="../src/images/Logo_rijksoverheid.svg.png" type="image/x-icon">
+    <script defer src="js/toetslogic.js"></script>
 </head>
 
 <body class="bg-blue-50 flex flex-col min-h-screen">
@@ -32,6 +33,7 @@
 
     <!-- Main Content -->
     <!-- Subcategorie Metadata -->
+
     <section class="container mx-auto py-12 px-4 lg:px-16">
         <h2 class="text-3xl font-semibold text-gray-800 mb-12 text-center">Metadata</h2>
 
@@ -62,43 +64,43 @@
             </div>
 
             <!-- Right Section - Questions for Metadata -->
-            <div class="bg-white p-6 rounded-lg shadow-lg border border-gray-200">
+            <div id="metadataQuestions" class="bg-white p-6 rounded-lg shadow-lg border border-gray-200">
                 <p class="text-gray-800 font-medium mb-6">Wat is metadata?</p>
                 <div class="space-y-4">
-                    <label class="flex items-center">
-                        <input type="radio" name="metadata1" class="form-radio text-blue-600 mr-2">
+                    <label class="flex items-center question">
+                        <input type="radio" name="metadata1" value="A" class="form-radio text-blue-600 mr-2">
                         <span class="text-gray-600">A) Informatie die beschrijft wie een document heeft gelezen.</span>
                     </label>
-                    <label class="flex items-center">
-                        <input type="radio" name="metadata1" class="form-radio text-blue-600 mr-2">
+                    <label class="flex items-center question">
+                        <input type="radio" name="metadata1" value="B" class="form-radio text-blue-600 mr-2">
                         <span class="text-gray-600">B) Beschrijvende informatie over een ander gegeven zoals auteur en
                             aanmaakdatum.</span>
                     </label>
-                    <label class="flex items-center">
-                        <input type="radio" name="metadata1" class="form-radio text-blue-600 mr-2">
+                    <label class="flex items-center question">
+                        <input type="radio" name="metadata1" value="C" class="form-radio text-blue-600 mr-2">
                         <span class="text-gray-600">C) Een lijst van alle documenten binnen een organisatie.</span>
                     </label>
                 </div>
 
                 <p class="text-gray-800 font-medium mt-6 mb-6">Waarom is metadata belangrijk?</p>
                 <div class="space-y-4">
-                    <label class="flex items-center">
-                        <input type="radio" name="metadata2" class="form-radio text-blue-600 mr-2">
+                    <label class="flex items-center question">
+                        <input type="radio" name="metadata2" value="A" class="form-radio text-blue-600 mr-2">
                         <span class="text-gray-600">A) Het helpt bij het snel vinden en organiseren van
                             documenten.</span>
                     </label>
-                    <label class="flex items-center">
-                        <input type="radio" name="metadata2" class="form-radio text-blue-600 mr-2">
+                    <label class="flex items-center question">
+                        <input type="radio" name="metadata2" value="B" class="form-radio text-blue-600 mr-2">
                         <span class="text-gray-600">B) Het voegt extra gegevens toe die documenten zwaarder
                             maken.</span>
                     </label>
-                    <label class="flex items-center">
-                        <input type="radio" name="metadata2" class="form-radio text-blue-600 mr-2">
+                    <label class="flex items-center question">
+                        <input type="radio" name="metadata2" value="C" class="form-radio text-blue-600 mr-2">
                         <span class="text-gray-600">C) Het zorgt ervoor dat bestanden permanent bewaard blijven.</span>
                     </label>
                 </div>
 
-                <button
+                <button id="checkMetadata"
                     class="bg-blue-600 text-white font-semibold py-2 px-6 rounded-lg mt-6 hover:bg-blue-700 transition-all">
                     Controleren
                 </button>
@@ -136,20 +138,20 @@
             </div>
 
             <!-- Right Section - Questions for Archiving -->
-            <div class="bg-white p-6 rounded-lg shadow-lg border border-gray-200">
+            <div id="archiveringQuestions" class="bg-white p-6 rounded-lg shadow-lg border border-gray-200">
                 <p class="text-gray-800 font-medium mb-6">Wat is het doel van archivering?</p>
                 <div class="space-y-4">
-                    <label class="flex items-center">
-                        <input type="radio" name="archivering1" class="form-radio text-blue-600 mr-2">
+                    <label class="flex items-center question">
+                        <input type="radio" name="archivering1" value="A" class="form-radio text-blue-600 mr-2">
                         <span class="text-gray-600">A) Documenten voor een korte tijd bewaren.</span>
                     </label>
-                    <label class="flex items-center">
-                        <input type="radio" name="archivering1" class="form-radio text-blue-600 mr-2">
+                    <label class="flex items-center question">
+                        <input type="radio" name="archivering1" value="B" class="form-radio text-blue-600 mr-2">
                         <span class="text-gray-600">B) Documenten voor de lange termijn opslaan voor referentie of
                             wettelijke doeleinden.</span>
                     </label>
-                    <label class="flex items-center">
-                        <input type="radio" name="archivering1" class="form-radio text-blue-600 mr-2">
+                    <label class="flex items-center question">
+                        <input type="radio" name="archivering1" value="C" class="form-radio text-blue-600 mr-2">
                         <span class="text-gray-600">C) Documenten te vernietigen die niet meer nodig zijn.</span>
                     </label>
                 </div>
@@ -157,22 +159,22 @@
                 <p class="text-gray-800 font-medium mt-6 mb-6">Hoe kan een slechte archiveringsstrategie een organisatie
                     beïnvloeden?</p>
                 <div class="space-y-4">
-                    <label class="flex items-center">
-                        <input type="radio" name="archivering2" class="form-radio text-blue-600 mr-2">
+                    <label class="flex items-center question">
+                        <input type="radio" name="archivering2" value="A" class="form-radio text-blue-600 mr-2">
                         <span class="text-gray-600">A) Het zorgt voor makkelijkere toegang tot documenten.</span>
                     </label>
-                    <label class="flex items-center">
-                        <input type="radio" name="archivering2" class="form-radio text-blue-600 mr-2">
+                    <label class="flex items-center question">
+                        <input type="radio" name="archivering2" value="B" class="form-radio text-blue-600 mr-2">
                         <span class="text-gray-600">B) Het kan leiden tot verlies van documenten en boetes voor
                             niet-naleving.</span>
                     </label>
-                    <label class="flex items-center">
-                        <input type="radio" name="archivering2" class="form-radio text-blue-600 mr-2">
+                    <label class="flex items-center question">
+                        <input type="radio" name="archivering2" value="C" class="form-radio text-blue-600 mr-2">
                         <span class="text-gray-600">C) Het heeft geen effect op de organisatie.</span>
                     </label>
                 </div>
 
-                <button
+                <button id="checkArchivering"
                     class="bg-blue-600 text-white font-semibold py-2 px-6 rounded-lg mt-6 hover:bg-blue-700 transition-all">
                     Controleren
                 </button>
@@ -180,12 +182,24 @@
         </div>
     </section>
 
-    <div class="flex bottom-4 justify-center p-4 flex space-x-4 mb-10">
-        <button
+    <div id="summaryModal" class="hidden fixed inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center">
+        <div class="bg-white rounded-lg shadow-lg p-8 text-center">
+            <h2 class="text-2xl font-bold mb-4">Jouw Resultaten</h2>
+            <p id="correctAnswerSummary" class="text-lg mb-4"></p>
+            <img id="summaryGif" src="https://steamuserimages-a.akamaihd.net/ugc/912408235214650873/D8CD02FEA0D9A427369A5CF05309025DA4982F4A/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false"
+                alt="Success Gif" class="w-80 mx-auto mb-4">
+            <button id="closeSummary" class="bg-blue-500 text-white py-2 px-6 rounded hover:bg-blue-600">Ga
+                verder</button>
+        </div>
+    </div>
+
+    <div id="nextPageButtonContainer" class="flex bottom-4 justify-center p-4 flex space-x-4 mb-10">
+        <button id="nextPageButton"
             class="bg-[#154273] text-white scale-110 py-2 px-8 rounded border-2 border-transparent hover:border-[#154273] hover:text-[#154273] hover:bg-white hover:scale-125i transition-all">
             Volgende pagina
         </button>
     </div>
+
 
     <!-- Footer -->
     <footer class="bg-[#154273] text-white py-6 mt-auto">
