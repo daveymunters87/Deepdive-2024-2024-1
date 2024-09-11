@@ -10,10 +10,7 @@
 </head>
 
 <body class="bg-white">
-    <!-- Navigation Bar -->
-    <nav class="bg-white border-b border-gray-200"></nav>
-
-    <!-- Logo Section -->
+    <!-- Nav -->
     <div class="flex items-center justify-center ml-48 mb-4">
         <a href="index.html" class="flex items-center">
             <img src="images/Logo_rijksoverheid.svg.png" alt="Logo" class="h-24 mr-4">
@@ -23,76 +20,80 @@
             <p class="text-sm text-gray-500">Ministerie van Economische Zaken</p>
         </div>
     </div>
-
-    <!-- Blue Line under Navbar -->
+    
+    <!-- Blue Line -->
     <div class="bg-[#154273] h-10"></div>
-
-    <!-- Hero Section -->
+    
     <section class="relative w-full h-96 bg-cover bg-center"
-        style="background-image: url('images/IT-technician-running-maintenance-program-on-laptop-in-a-server-room.jpg');">
-        <div class="absolute inset-0 bg-gray-800 bg-opacity-50 flex justify-center items-center">
+    style="background-image: url('images/index5.png');">
+    <div class="absolute inset-0 bg-opacity-50 flex justify-center items-center">
+        <div class="bg-gray-200 bg-opacity-25 px-8 py-4 rounded">
             <h1 class="text-white text-4xl font-bold text-center">Welkom! bij ons leerportaal</h1>
         </div>
+    </div>
     </section>
-
-
-    <!-- Main Container for Specific Sections -->
-    <div class="container mx-auto px-4">
-        <!-- Content Section 1 -->
-        <section class="flex flex-col md:flex-row p-8 items-center justify-center">
-            <div class="md:w-2/3">
-                <h2 class="text-2xl font-bold mb-2">Cursus Informatiehuishouding</h2>
+    
+    
+    
+    
+    <!-- Text -->
+    <section class="max-w-screen-xl mx-auto py-12 my-8 lg:px-16">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+            <div>
+                <h2 class="text-2xl font-bold mb-4">Cursus Informatiehuishouding</h2>
                 <p class="italic text-red-500 mb-4">Nieuw!</p>
+                <p class="text-lg mb-4">
+                    Til jouw datavaardigheden naar een hoger niveau in deze praktijkgerichte cursus.
+                </p>
                 <p class="text-gray-700 mb-4">
-                    Til jouw datavaardigheden naar een hoger niveau in deze praktijkgerichte cursus. Ontdek hoe je grip
-                    krijgt op alle data binnen je organisatie en leer welke data je opslaat en waar je deze kunt vinden,
-                    hoe
-                    je metadata inzet voor razendsnelle vindbaarheid en slimme technieken voor het rubriceren en
-                    archiveren
-                    van data. Onmisbaar voor iedere professional die met informatie werkt. Verzeker jezelf van een
-                    voorsprong en begin vandaag!
+                    Ontdek hoe je grip krijgt op alle data binnen je organisatie en leer welke data je opslaat en waar je deze kunt vinden, hoe je metadata inzet voor razendsnelle vindbaarheid en slimme technieken voor het rubriceren en archiveren van data.
+                </p>
+                <p class="text-gray-700 mb-6">
+                    Onmisbaar voor iedere professional die met informatie werkt. Verzeker jezelf van een voorsprong en begin vandaag!
                 </p>
             </div>
-            <div class="md:w-1/3">
-                <img src="images/0002576_cursus-zonneboiler-ontwerpen-installeren-en-onderhouden-1-dag_600.jpeg"
-                    alt="Illustration" class="w-full">
+            <div>
+                <img src="../src/images/index1.png" alt="Illustratie Informatiehuishouding" class="ml-auto" width="350" height="30">
             </div>
-        </section>
-
-        <!-- Content Section 2 -->
-        <section class="text-center py-8">
-            <h2 class="text-2xl font-bold">Animatie video over het Leerhuis Informatiehuishouding</h2>
-            <p class="text-gray-500">18-01-2023</p>
-            <iframe width="800" height="500" src="https://www.youtube.com/embed/qlifWmrJ5BE?si=V8XmcPCb7EfwK0vI"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="mx-auto mt-4"></iframe>
-        </section>
-
-        <!-- Content Section 3 -->
-        <section class="py-8">
-            <h2 class="text-2xl font-bold mb-6 text-center">Wat ga je vandaag doen?</h2>
-            <!-- Wide Container with Extra Spacing -->
-            <div
-                class="flex flex-col md:flex-row container mx-auto items-center justify-center space-y-8 md:space-y-0 md:space-x-20 px-32">
-                <div class="flex flex-col items-center">
-                    <img src="images/Talentmanagement-IMK-Opleidingen-removebg-preview.png" alt="Cursussen Icon"
-                        class="w-64 h-64 mb-8">
-                    <a href="cursussen.html" class="border border-blue-500 text-blue-500 py-2 px-4 rounded">Cursussen</a>
-                </div>
-                <div class="flex flex-col items-center">
-                    <img src="images/bitcity-removebg-preview.png" alt="Bitty City Icon" class="w-64 h-64 mb-8">
-                    <button class="border border-blue-500 text-blue-500 py-2 px-4 rounded">Bitty City</button>
-                </div>
-                <div class="flex flex-col items-center">
-                    <img src="images/tipstool.jpg" alt="Tools & Tips Icon" class="w-64 h-64 mb-8">
-                    <button class="border border-blue-500 text-blue-500 py-2 px-4 rounded">Tools & Tips</button>
-                </div>
+        </div>
+    </section>
+    
+    
+    <!-- Video-->
+    <section class="text-center py-8">
+        <h2 class="text-2xl font-bold">Animatie video over het Leerhuis Informatiehuishouding</h2>
+        <p class="text-gray-500">18-01-2023</p>
+        <iframe width="800" height="500" src="video/ocw-dco-20230118-idd8ozcoz-web-hd.mp4"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="mx-auto mt-4"></iframe>
+    </section>
+    
+    <!-- Cards -->
+    <section class="container mx-auto py-12 px-4 lg:px-16">
+        <h2 class="text-center text-2xl font-bold mb-12">Kies hier je module</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-2">
+            <!-- Card 1 -->
+            <div class="text-center">
+                <img src="../src/images/index2.png" alt="Cursussen" class="mx-auto mb-8" width="250" height="250">
+                <a href="informatiehuishouding.html" class="bg-transparent border-2 border-[#154273] text-[#154273] py-2 px-16 rounded hover:bg-[#154273] hover:text-white transition-all">Cursussen</a>
             </div>
-        </section>
-
-    </div> <!-- End of Main Container -->
-
+            
+            <!-- Card 2  -->
+            <div class="text-center">
+                <img src="../src/images/index3.png" alt="Bitty City" class="mx-auto mb-8" width="250" height="250">
+                <button class="bg-transparent border-2 border-[#154273] text-[#154273] py-2 px-16 rounded hover:bg-[#154273] hover:text-white transition-all">Bitty City</button>
+            </div>
+            
+            <!-- Card 3 -->
+            <div class="text-center">
+                <img src="../src/images/index4.png" alt="Tools & Tips" class="mx-auto mb-8" width="250" height="250">
+                <button class="bg-transparent border-2 border-[#154273] text-[#154273] py-2 mb-4 px-16 rounded hover:bg-[#154273] hover:text-white transition-all">Tools & Tips</button>
+            </div>
+        </div>
+    </section>    
+    
     <!-- Footer -->
     <footer class="bg-[#154273] text-white py-6 mt-auto">
         <div class="container mx-auto flex justify-center space-x-40">
