@@ -1,15 +1,163 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 .press-start-2p-regular {
-    font-family: "Press Start 2P", system-ui;
-    font-weight: 400;
-    font-style: normal;
-  }
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
 
-/* .progress-bar {
-    background: conic-gradient(#01689B 0deg 246deg, transparent 246deg)
-} */
+.grayscale {
+  filter: grayscale(100%);
+}
 
 .hero-banner {
-    background-image: url(https://cdnb.artstation.com/p/assets/images/images/056/671/273/large/sarah-hennig-skyline.jpg?1669821740?auto=compress&cs=tinysrgb&h=750&w=1260);
+  background-image: url(https://cdnb.artstation.com/p/assets/images/images/056/671/273/large/sarah-hennig-skyline.jpg?1669821740?auto=compress&cs=tinysrgb&h=750&w=1260);
+}
+
+#countdown-timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f7fafc;
+  /* Subtiele achtergrondkleur */
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  /* Zachte schaduw */
+}
+
+#countdown-timer div {
+  margin: 0 1rem;
+  text-align: center;
+}
+
+#countdown-timer span {
+  display: block;
+  font-size: 1.5rem;
+  /* Grotere cijfers */
+  font-weight: bold;
+  color: #154273;
+  /* Kleur consistent met pagina */
+}
+
+#countdown-timer .label {
+  font-size: 0.875rem;
+  /* Kleinere tekst voor labels */
+  color: #4a5568;
+  /* Subtiele grijze kleur */
+}
+
+.blurred {
+  pointer-events: none;
+  /* Voorkomt interactie met de geblurde inhoud */
+}
+
+/* Maak de challenges duidelijker zichtbaar */
+.challenge-completed {
+  opacity: 0.5;
+}
+
+/* Basisstijl voor badge-kaarten */
+.badge-card,
+.challenge-card {
+  position: relative;
+  /* Voor absolute positionering van confetti */
+  overflow: hidden;
+  /* Verberg de confetti die buiten de kaart valt */
+  transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  /* Behoud de originele schaduw */
+}
+
+
+/* Confetti-elementen */
+.confetti {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: #f7c0c0;
+  /* Startkleur voor confetti */
+  opacity: 0;
+  animation: confetti 1.5s ease-in-out forwards;
+}
+
+/* Keyframe voor confetti */
+@keyframes confetti {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(300px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Keyframes voor het voltooien van de kaartanimatie */
+@keyframes completeAnimation {
+  0% {
+    transform: scale(1) rotate(0deg);
+    background-color: white;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.1);
+  }
+
+  30% {
+    transform: scale(1.1) rotate(5deg);
+    background-color: #d1f5d3;
+    /* Groenachtige kleur als feedback voor voltooien */
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+  }
+
+  60% {
+    transform: scale(0.9) rotate(-5deg);
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+  }
+
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+    background-color: white;
+    box-shadow: 1 1 1 rgba(0, 0, 0, 0.1);
+  }
+}
+
+.animate-complete {
+  animation: completeAnimation 1s ease-in-out forwards;
+  /* Voegt de kaartanimatie toe */
+}
+
+/* Keyframes voor badge- en challenge-animatie */
+@keyframes badgeAnimation {
+  0% {
+    transform: scale(1);
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  30% {
+    transform: scale(1.1);
+    background-color: #e0f7fa;
+    /* Blauwachtige kleur als feedback voor ontgrendelen */
+    box-shadow: 0 4px 20px rgba(0, 153, 255, 0.5);
+    /* Versterkte schaduw tijdens de animatie */
+  }
+
+  60% {
+    transform: scale(0.9);
+    box-shadow: 0 4px 15px rgba(0, 153, 255, 0.3);
+    /* Versterkte schaduw tijdens de animatie */
+  }
+
+  100% {
+    transform: scale(1);
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Terug naar originele schaduw */
+  }
+}
+
+.animate-badge {
+  animation: badgeAnimation 1s ease-in-out forwards;
+  /* Badge-ontgrendelanimatie */
 }

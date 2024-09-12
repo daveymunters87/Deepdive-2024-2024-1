@@ -3,15 +3,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="../dist/output.css" rel="stylesheet">
+  <link rel="shortcut icon" href="../src/images/Logo_rijksoverheid.svg.png" type="image/x-icon">
   <link rel="stylesheet" href="style.css">
-  <script defer src="city.js"></script>
+  <script defer src="js/city.js"></script>
   <title>BITTY CITY</title>
 </head>
 <body>
     <!-- Logo en tekst -->
     <nav class="bg-white border-b border-gray-200">
         <div class="container mx-auto flex items-center justify-center">
-            <a href="home.html">
+            <a href="index.html">
                 <div class="flex items-center mb-4 ml-48">
                     <img src="images/Logo_rijksoverheid.svg.png" alt="Logo" class="h-24 mr-4">
                 <div>
@@ -25,47 +26,40 @@
         <!-- hero met profiel foto en tekst -->
         <div class="w-full bg-center bg-cover h-[400px] hero-banner">
             <div class="flex items-center justify-center w-full h-full bg-gray-900 bg-opacity-50 py-12">
-                <div class="container px-4 mx-auto text-center">  
-                    <img class="rounded-full w-44 h-44 mx-auto object-cover" src="images/davey.png" alt="Profiel foto">
-                    <h1 class="text-3xl text-white py-8 press-start-2p-regular">BITTY CITY</h1>
+                <div class="container px-4 mx-auto text-center">
+                    <h1 class="text-3xl text-white my-8 press-start-2p-regular">BITTY CITY</h1>
+                    <img class="rounded-full w-44 h-44 mx-auto object-cover" src="images/profielfoto.jpg" alt="Profiel foto">
+                    <h1 class="text-1xl text-white my-8 press-start-2p-regular">Maikel van der Berg</h1>
                 </div>
             </div>
         </div>
 
     <div class="container mx-auto px-4 lg:px-40">
         <section class="my-8">
+    <div class="container mx-auto text-center">
+        <!-- badges -->
+        <h2 class="text-3xl font-bold mb-6 mt-12 press-start-2p-regular">Mijn badges</h2>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-7" id="badgesContainer">
+            <!-- Badges worden hier dynamisch toegevoegd via JavaScript -->
+        </div>
+    </div>
+</section>
+
+        <section class="my-8">
             <div class="container mx-auto text-center">
-                <!-- badges -->
-                <h2 class="text-3xl font-bold mb-6 press-start-2p-regular">Mijn badges</h2>
-                <div class="grid grid-cols-1 md:grid-cols-4 gap-7">
-                    <div class="bg-white shadow-lg rounded-lg p-4">
-                        <img src="images/badge1.png" alt="Perfect Module" class="mx-auto grayscale h-48 w-48 transition-transform duration-300 transform hover:scale-125"> <!-- Larger badge image -->
-                        <p class="font-bold mt-4">Behaal perfecte module</p>
-                        <p class="text-sm text-gray-500"></p>
-                    </div>
-                    <div class="bg-white shadow-lg rounded-lg p-4">
-                        <img src="images/badge2.png" alt="Level 20" class="mx-auto h-48 w-48 transition-transform duration-300 transform hover:scale-125"> <!-- Larger badge image -->
-                        <p class="font-bold mt-4">Behaal level 20</p>
-                        <p class="text-sm text-gray-500">sep 12, 2052</p>
-                    </div>
-                    <div class="bg-white shadow-lg rounded-lg p-4">
-                        <img src="images/badge3.png" alt="Nummer 1" class="mx-auto h-48 w-48 transition-transform duration-300 transform hover:scale-125"> <!-- Larger badge image -->
-                        <p class="font-bold mt-4">Sta op nummer 1</p>
-                        <p class="text-sm text-gray-500">sep 12, 2052</p>
-                    </div>
-                    <div class="bg-white shadow-lg rounded-lg p-4">
-                        <img src="images/badge4.png" alt="Top 10" class="mx-auto h-48 w-48 transition-transform duration-300 transform hover:scale-125"> <!-- Larger badge image -->
-                        <p class="font-bold mt-4">Sta in de top 10</p>
-                        <p class="text-sm text-gray-500">sep 12, 2052</p>
-                    </div>
+                <!-- challenges -->
+                <h2 class="text-3xl font-bold mb-6 mt-12 press-start-2p-regular">Mijn Challenges</h2>
+                <div id="challengesContainer" class="grid grid-cols-1 md:grid-cols-3 gap-7">
+                    <!-- Challenge cards zullen hier dynamisch worden geladen -->
                 </div>
             </div>
         </section>
+        
         <!-- level en leaderboard -->
         <div class="grid grid-cols-2">
             <!-- level -->
             <div class="level">
-                <section class="my-8">
+                <section class="my-8 mr-60">
                     <div class="container mx-auto text-center">
                         <div class="relative flex items-center justify-center">
                             <div class="w-48 h-48 rounded-full bg-black relative">
@@ -99,23 +93,18 @@
                                 <tbody>
                                     <tr class="bg-black text-white">
                                         <td class="px-4 py-2">1</td>
-                                        <td class="px-4 py-2">Wim Wortelsoep</td>
-                                        <td class="px-4 py-2">521</td>
+                                        <td class="px-4 py-2">Jada Hooper</td>
+                                        <td class="px-4 py-2" id="LevelNumber"></td>
                                     </tr>
                                     <tr class="bg-gray-200">
                                         <td class="px-4 py-2">2</td>
                                         <td class="px-4 py-2">Sjonnie Kassabonnie</td>
-                                        <td class="px-4 py-2">452</td>
+                                        <td class="px-4 py-2">22</td>
                                     </tr>
                                     <tr>
                                         <td class="px-4 py-2">3</td>
                                         <td class="px-4 py-2">Davey Muntinglaan</td>
-                                        <td class="px-4 py-2">342</td>
-                                    </tr>
-                                    <tr class="bg-gray-200">
-                                        <td class="px-4 py-2">51</td>
-                                        <td class="px-4 py-2">Maikel Banaan</td>
-                                        <td class="px-4 py-2">23</td>
+                                        <td class="px-4 py-2">12</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -147,5 +136,6 @@
             </div>
         </div>
     </footer>
+    <!-- <script src="js/challenges.js"></script> -->
 </body>
 </html>
