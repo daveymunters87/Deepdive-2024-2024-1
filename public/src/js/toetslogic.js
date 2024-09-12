@@ -48,13 +48,14 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('closeSummary').addEventListener('click', function () {
         const summaryModal = document.getElementById('summaryModal');
         summaryModal.classList.add('hidden');
-
+    
         // Verwijder de XP tekst na sluiten
         const xpElement = summaryModal.querySelector('.text-green-500');
         if (xpElement) xpElement.remove();
-
-        // Verwijder blur van alle secties
+    
         document.querySelectorAll('.blurred').forEach(element => element.classList.remove('blurred'));
+    
+        window.location.href = "informatiehuishouding.html";
     });
 
     document.getElementById('checkMetadata').addEventListener('click', function () {
