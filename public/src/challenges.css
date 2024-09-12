@@ -2,11 +2,14 @@
 .challenge-completed {
     opacity: 0.5;
 }
-/* Basiskaartstijl */
-.challenge-card {
-    position: relative; /* Voor absolute positionering van de confetti */
+/* Basisstijl voor badge-kaarten */
+.badge-card, .challenge-card {
+    position: relative; /* Voor absolute positionering van confetti */
     overflow: hidden; /* Verberg de confetti die buiten de kaart valt */
+    transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Behoud de originele schaduw */
 }
+
 
 /* Confetti-elementen */
 .confetti {
@@ -50,38 +53,34 @@
         transform: scale(1) rotate(0deg);
         opacity: 1;
         background-color: white;
-        box-shadow: 0 0 0 rgba(0, 0, 0, 0.1);
+        box-shadow: 1 1 1 rgba(0, 0, 0, 0.1);
     }
 }
 
 .animate-complete {
     animation: completeAnimation 1s ease-in-out forwards; /* Voegt de kaartanimatie toe */
 }
-/* Basisstijl voor badge-kaarten */
-.badge-card {
-    position: relative; /* Voor absolute positionering van confetti */
-    overflow: hidden; /* Verberg de confetti die buiten de kaart valt */
-    transition: transform 0.3s, background-color 0.3s;
-}
 
-/* Keyframes voor badge-animatie */
+/* Keyframes voor badge- en challenge-animatie */
 @keyframes badgeAnimation {
     0% {
         transform: scale(1);
         background-color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
     30% {
         transform: scale(1.1);
         background-color: #e0f7fa; /* Blauwachtige kleur als feedback voor ontgrendelen */
-        box-shadow: 0 0 20px rgba(0, 153, 255, 0.5);
+        box-shadow: 0 4px 20px rgba(0, 153, 255, 0.5); /* Versterkte schaduw tijdens de animatie */
     }
     60% {
         transform: scale(0.9);
-        box-shadow: 0 0 20px rgba(0, 153, 255, 0.3);
+        box-shadow: 0 4px 15px rgba(0, 153, 255, 0.3); /* Versterkte schaduw tijdens de animatie */
     }
     100% {
         transform: scale(1);
         background-color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Terug naar originele schaduw */
     }
 }
 

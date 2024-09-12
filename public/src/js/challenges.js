@@ -94,7 +94,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Function to mark a challenge as completed
     window.completeChallenge = function(index) {
-        challenges[index].completed = true; // Update challenge status
+        const challenge = challenges[index];
+        challenge.completed = true; // Update challenge status
         renderChallenges(); // Re-render challenges
 
         // Add animation to completed card
@@ -103,11 +104,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Generate confetti elements
         generateConfetti(completedCard);
+
+        // Extract and log only the XP number
+        const xpEarned = parseInt(challenge.reward); 
+        console.log(xpEarned);
     };
 
     // Function to unlock a badge
     window.unlockBadge = function(index) {
-        badges[index].unlocked = true; // Update badge status
+        const badge = badges[index];
+        badge.unlocked = true; // Update badge status
         renderBadges(); // Re-render badges
 
         // Add animation to unlocked badge
@@ -116,6 +122,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Generate confetti elements
         generateConfetti(unlockedBadge);
+
+        // Extract and log only the XP number
+        const xpEarned = parseInt(badge.reward); 
+        console.log(xpEarned);
     };
 
     // Function to generate confetti elements
