@@ -87,6 +87,51 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         console.log(xpEarned); // Log alleen het XP-getal
+        addXP(xpEarned);
+    }
+
+    async function getLevelData() {
+        if (!localStorage.getItem('levelData')) {
+            const request = await fetch('./data.json');
+            const levelData = await request.json();
+            localStorage.setItem('levelData', JSON.stringify(levelData));
+            return levelData;
+        } else {
+            let levelData = localStorage.getItem('levelData');
+            levelData = JSON.parse(levelData);
+            return levelData;
+        }
+    }
+    
+    function addXP(addedXP) {
+        getLevelData().then(levelData => {
+            let level = levelData['Level'];
+            let currentXP = levelData['CurrentXP'];
+            let totalXP = levelData['TotalXP'];
+    
+            currentXP += addedXP;
+    
+            while (currentXP >= totalXP) {
+                currentXP -= totalXP;
+                level++;
+            }
+    
+            let updatedData = {
+                "Level": level,
+                "CurrentXP": currentXP,
+                "TotalXP": totalXP
+            };
+            localStorage.setItem('levelData', JSON.stringify(updatedData));
+    
+            levelElem.textContent = `Level ${level}`;
+            xpElem.textContent = `${currentXP}/${totalXP} XP`;
+            levelNumberElem.textContent = level;
+    
+            console.log(`New Level: ${level}, Current XP: ${currentXP}/${totalXP}`);
+            let degrees = 360 / (totalXP / currentXP);
+            console.log(degrees);
+            updateProgressBar(degrees);
+        });
     }
 
     document.addEventListener('DOMContentLoaded', function () {
@@ -94,17 +139,15 @@ document.addEventListener('DOMContentLoaded', function () {
         const summaryModal = document.getElementById('summaryModal');
         const closeSummary = document.getElementById('closeSummary');
 
-        // Voeg event listeners toe voor de controle knoppen
         checkButtons.forEach(button => {
             button.addEventListener('click', function () {
                 checkAnswers();
             });
         });
 
-        // Sluit de samenvattingsmodal
         closeSummary.addEventListener('click', function () {
             summaryModal.classList.add('hidden');
-            const xpElement = summaryModal.querySelector('.text-green-500'); // Verwijder de XP tekst na sluiten
+            const xpElement = summaryModal.querySelector('.text-green-500');
             if (xpElement) xpElement.remove();
         });
     });

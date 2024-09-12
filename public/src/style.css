@@ -1,43 +1,139 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 .press-start-2p-regular {
-    font-family: "Press Start 2P", system-ui;
-    font-weight: 400;
-    font-style: normal;
-  }
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
 
-.progress-bar {
-    background: conic-gradient(#01689B 0deg 246deg, transparent 246deg)
+.grayscale {
+  filter: grayscale(100%);
 }
 
 .hero-banner {
-    background-image: url(https://cdnb.artstation.com/p/assets/images/images/056/671/273/large/sarah-hennig-skyline.jpg?1669821740?auto=compress&cs=tinysrgb&h=750&w=1260);
+  background-image: url(https://cdnb.artstation.com/p/assets/images/images/056/671/273/large/sarah-hennig-skyline.jpg?1669821740?auto=compress&cs=tinysrgb&h=750&w=1260);
 }
 
 #countdown-timer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f7fafc; /* Subtiele achtergrondkleur */
-    padding: 1rem;
-    border-radius: 0.5rem;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Zachte schaduw */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f7fafc;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+#countdown-timer div {
+  margin: 0 1rem;
+  text-align: center;
+}
+
+#countdown-timer span {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #154273;
+}
+
+#countdown-timer .label {
+  font-size: 0.875rem;
+  color: #4a5568;
+}
+
+.blurred {
+  pointer-events: none;
+}
+
+.challenge-completed {
+  opacity: 0.5;
+}
+
+.badge-card,
+.challenge-card {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+.confetti {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: #f7c0c0;
+  opacity: 0;
+  animation: confetti 1.5s ease-in-out forwards;
+}
+
+@keyframes confetti {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
   }
-  
-  #countdown-timer div {
-    margin: 0 1rem;
-    text-align: center;
+
+  100% {
+    transform: translateY(300px) rotate(360deg);
+    opacity: 0;
   }
-  
-  #countdown-timer span {
-    display: block;
-    font-size: 1.5rem; /* Grotere cijfers */
-    font-weight: bold;
-    color: #154273; /* Kleur consistent met pagina */
+}
+
+@keyframes completeAnimation {
+  0% {
+    transform: scale(1) rotate(0deg);
+    background-color: white;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.1);
   }
-  
-  #countdown-timer .label {
-    font-size: 0.875rem; /* Kleinere tekst voor labels */
-    color: #4a5568; /* Subtiele grijze kleur */
+
+  30% {
+    transform: scale(1.1) rotate(5deg);
+    background-color: #d1f5d3;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
   }
-  
+
+  60% {
+    transform: scale(0.9) rotate(-5deg);
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+  }
+
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+    background-color: white;
+    box-shadow: 1 1 1 rgba(0, 0, 0, 0.1);
+  }
+}
+
+.animate-complete {
+  animation: completeAnimation 1s ease-in-out forwards;
+}
+
+@keyframes badgeAnimation {
+  0% {
+    transform: scale(1);
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  30% {
+    transform: scale(1.1);
+    background-color: #e0f7fa;
+    box-shadow: 0 4px 20px rgba(0, 153, 255, 0.5);
+  }
+
+  60% {
+    transform: scale(0.9);
+    box-shadow: 0 4px 15px rgba(0, 153, 255, 0.3);
+  }
+
+  100% {
+    transform: scale(1);
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.animate-badge {
+  animation: badgeAnimation 1s ease-in-out forwards;
+}

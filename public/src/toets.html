@@ -8,7 +8,7 @@
     <link href="../dist/output.css" rel="stylesheet">
     <link rel="shortcut icon" href="../src/images/Logo_rijksoverheid.svg.png" type="image/x-icon">
     <script defer src="js/toetslogic.js"></script>
-    <link href="toets.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
 </head>
 
 <body class="bg-blue-50 flex flex-col min-h-screen">
@@ -16,7 +16,7 @@
     <!-- Navbar -->
     <nav class="bg-white border-b border-gray-200">
         <div class="container mx-auto flex items-center justify-center">
-            <!-- Logo section -->
+            <!-- Logo  -->
             <a href="index.html">
                 <div class="flex items-center mb-4 ml-48">
                     <img src="images/Logo_rijksoverheid.svg.png" alt="Logo" class="h-24 mr-4">
@@ -28,19 +28,15 @@
         </div>
         </div>
 
-        <!-- Blue Line under Navbar -->
         <div class="bg-[#154273] h-10"></div>
     </nav>
 
     <!-- Main Content -->
-    <!-- Subcategorie Metadata -->
-
     <section class="container mx-auto py-12 px-4 lg:px-16">
         <h2 class="text-3xl font-semibold text-gray-800 mb-12 text-center">Metadata</h2>
 
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <div class="bg-gray-50 p-8 rounded-lg shadow-lg border border-gray-200 relative">
-                <!-- Icon -->
                 <div class="absolute top-4 left-4 bg-blue-100 p-2 rounded-full">
                     <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                         xmlns="http://www.w3.org/2000/svg">
@@ -50,7 +46,6 @@
                     </svg>
                 </div>
 
-                <!-- Text Content -->
                 <div class="ml-12">
                     <h1 class="text-black text-xl pb-10">Vraag 1</h1>
                     <p class="text-gray-700 leading-relaxed text-lg">
@@ -64,7 +59,6 @@
                 </div>
             </div>
 
-            <!-- Right Section - Questions for Metadata -->
             <div id="metadataQuestions" class="bg-white p-6 rounded-lg shadow-lg border border-gray-200">
                 <p class="text-gray-800 font-medium mb-6">Wat is metadata?</p>
                 <div class="space-y-4">
@@ -109,13 +103,11 @@
         </div>
     </section>
 
-    <!-- Subcategorie Archivering -->
     <section class="container mx-auto py-12 px-4 lg:px-16">
         <h2 class="text-3xl font-semibold text-gray-800 mb-12 text-center">Archivering</h2>
 
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <div class="bg-gray-50 p-8 rounded-lg shadow-lg border border-gray-200 relative ">
-                <!-- Icon -->
                 <div class="absolute top-4 left-4 bg-blue-100 p-2 rounded-full">
                     <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                         xmlns="http://www.w3.org/2000/svg">
@@ -125,7 +117,6 @@
                     </svg>
                 </div>
 
-                <!-- Text Content -->
                 <div class="ml-12">
                     <h1 class="text-black text-xl pb-10">Vraag 2</h1>
                     <p class="text-gray-700 leading-relaxed text-lg">
@@ -138,7 +129,6 @@
                 </div>
             </div>
 
-            <!-- Right Section - Questions for Archiving -->
             <div id="archiveringQuestions" class="bg-white p-6 rounded-lg shadow-lg border border-gray-200">
                 <p class="text-gray-800 font-medium mb-6">Wat is het doel van archivering?</p>
                 <div class="space-y-4">
@@ -187,9 +177,11 @@
         <div class="bg-white rounded-lg shadow-lg p-8 text-center">
             <h2 class="text-2xl font-bold mb-4">Jouw Resultaten</h2>
             <p id="correctAnswerSummary" class="text-lg mb-4"></p>
-            <img id="summaryGif" src="https://steamuserimages-a.akamaihd.net/ugc/912408235214650873/D8CD02FEA0D9A427369A5CF05309025DA4982F4A/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false"
+            <img id="summaryGif"
+                src="https://steamuserimages-a.akamaihd.net/ugc/912408235214650873/D8CD02FEA0D9A427369A5CF05309025DA4982F4A/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false"
                 alt="Success Gif" class="w-80 mx-auto mb-4">
-                <button id="closeSummary" class="bg-blue-500 text-white py-2 px-6 rounded hover:bg-blue-600">Ga verder</button>
+            <button id="closeSummary" class="bg-blue-500 text-white py-2 px-6 rounded hover:bg-blue-600">Ga
+                verder</button>
         </div>
     </div>
 
@@ -204,7 +196,6 @@
     <!-- Footer -->
     <footer class="bg-[#154273] text-white py-6 mt-auto">
         <div class="container mx-auto flex justify-center space-x-40">
-            <!-- Left Section -->
             <div class="flex flex-col items-center">
                 <h2 class="font-semibold mb-2">Over deze site</h2>
                 <ul class="text-center">
@@ -214,7 +205,6 @@
                     <li><a href="#" class="text-sm hover:underline">Toegankelijkheid</a></li>
                 </ul>
             </div>
-            <!-- Right Section -->
             <div class="flex flex-col items-center">
                 <h2 class="font-semibold mb-2">Service</h2>
                 <ul class="text-center">
