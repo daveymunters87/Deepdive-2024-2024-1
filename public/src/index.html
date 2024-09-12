@@ -9,11 +9,11 @@
     <link href="../dist/output.css" rel="stylesheet">
 </head>
 
-<body class="bg-white">
+<body class="bg-white flex flex-col min-h-screen">
     <!-- Nav -->
-    <div class="flex items-center justify-center ml-48 mb-4">
+    <div class="flex items-center justify-center ml-48 mb-4 mt-4">
         <a href="index.html" class="flex items-center">
-            <img src="images/Logo_rijksoverheid.svg.png" alt="Logo" class="h-24 mr-4">
+            <img src="../src/images/Logo_rijksoverheid.svg.png" alt="Logo" class="h-24 mr-4">
         </a>
         <div>
             <h1 class="text-sm font-semibold text-gray-700">Dienst ICT Uitvoering</h1>
@@ -24,76 +24,72 @@
     <!-- Blue Line -->
     <div class="bg-[#154273] h-10"></div>
     
-    <!-- Hero -->
-    <section class="relative w-full h-96 bg-cover bg-center brightness-90"
-    style="background-image: url('images/datacenter.webp');">
-    <div class="absolute inset-0 bg-opacity-50 flex justify-center items-center">
-        <div class="bg-gray-200 bg-opacity-25 px-8 py-4 rounded">
-            <h1 class="text-white text-4xl font-bold text-center">Welkom! bij ons leerportaal</h1>
+    <!-- Hero Section -->
+    <section class="relative w-full h-[450px] bg-cover bg-center" style="background-image: url('../src/images/datacenter.webp');">
+        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+            <h1 class="text-5xl font-extrabold text-white">Welkom bij ons leerportaal</h1>
         </div>
-    </div>
     </section>
-    
-    
-    
-    
-    <!-- Text -->
-    <section class="max-w-screen-xl mx-auto py-12 my-8 lg:px-16">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+
+    <!-- Cursus Informatiehuishouding Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center px-6">
             <div>
-                <h2 class="text-2xl font-bold mb-4">Cursus Informatiehuishouding</h2>
-                <p class="italic text-red-500 mb-4">Nieuw!</p>
-                <p class="text-lg mb-4">
+                <h2 class="text-3xl font-bold text-[#154273] mb-4">Cursus Informatiehuishouding</h2>
+                <p class="text-red-500 text-lg italic mb-2">Nieuw!</p>
+                <p class="text-lg leading-relaxed mb-4">
                     Til jouw datavaardigheden naar een hoger niveau in deze praktijkgerichte cursus.
+                    Ontdek hoe je grip krijgt op alle data binnen je organisatie en leer welke data je opslaat en waar
+                    je deze kunt vinden, hoe je metadata inzet voor razendsnelle vindbaarheid en slimme technieken voor het rubriceren en archiveren van data.
                 </p>
-                <p class="text-gray-700 mb-4">
-                    Ontdek hoe je grip krijgt op alle data binnen je organisatie en leer welke data je opslaat en waar je deze kunt vinden, hoe je metadata inzet voor razendsnelle vindbaarheid en slimme technieken voor het rubriceren en archiveren van data.
-                </p>
-                <p class="text-gray-700 mb-6">
+                <p class="text-gray-600 leading-relaxed mb-6">
                     Onmisbaar voor iedere professional die met informatie werkt. Verzeker jezelf van een voorsprong en begin vandaag!
                 </p>
+                <a href="#" class="inline-block bg-[#154273] text-white py-3 px-8 rounded shadow hover:bg-[#123660] transition duration-300">Meld je aan</a>
             </div>
-            <div>
-                <img src="../src/images/index1.png" alt="Illustratie Informatiehuishouding" class="ml-auto" width="350" height="30">
+            <div class="flex justify-center">
+                <img src="../src/images/index1.png" alt="Illustratie Informatiehuishouding" class="w-96 rounded shadow-lg">
             </div>
         </div>
     </section>
-    
-    
-    <!-- Video-->
-    <section class="text-center py-8">
-        <h2 class="text-2xl font-bold">Animatie video over het Leerhuis Informatiehuishouding</h2>
-        <p class="text-gray-500">18-01-2023</p>
-        <iframe width="800" height="500" src="video/ocw-dco-20230118-idd8ozcoz-web-hd.mp4"
-        title="YouTube video player" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="mx-auto mt-4"></iframe>
+
+    <!-- Video Section -->
+    <section class="bg-gray-100 py-16">
+        <div class="container mx-auto text-center px-6">
+            <h2 class="text-3xl font-bold text-[#154273] mb-4">Animatie video over het Leerhuis Informatiehuishouding</h2>
+            <p class="text-gray-500 mb-8">18-01-2023</p>
+            <video width="800" height="450" controls class="mx-auto rounded-lg shadow-lg">
+                <source src="video/ocw-dco-20230118-idd8ozcoz-web-hd.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
     </section>
-    
-    <!-- Cards -->
-    <section class="container mx-auto py-12 px-4 lg:px-16">
-        <h2 class="text-center text-2xl font-bold mb-12">Kies hier je module</h2>
-        
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-2">
-            <!-- Card 1 -->
-            <div class="text-center">
-                <img src="../src/images/index2.png" alt="Cursussen" class="mx-auto mb-8" width="250" height="250">
-                <a href="informatiehuishouding.html" class="bg-transparent border-2 border-[#154273] text-[#154273] py-2 px-16 rounded hover:bg-[#154273] hover:text-white transition-all">Cursussen</a>
-            </div>
-            
-            <!-- Card 2  -->
-            <div class="text-center">
-                <img src="../src/images/index3.png" alt="Bitty City" class="mx-auto mb-8" width="250" height="250">
-                <button class="bg-transparent border-2 border-[#154273] text-[#154273] py-2 px-16 rounded hover:bg-[#154273] hover:text-white transition-all">Bitty City</button>
-            </div>
-            
-            <!-- Card 3 -->
-            <div class="text-center">
-                <img src="../src/images/index4.png" alt="Tools & Tips" class="mx-auto mb-8" width="250" height="250">
-                <button class="bg-transparent border-2 border-[#154273] text-[#154273] py-2 mb-4 px-16 rounded hover:bg-[#154273] hover:text-white transition-all">Tools & Tips</button>
+
+    <!-- Modules Section -->
+    <section class="py-16">
+        <div class="container mx-auto text-center px-6">
+            <h2 class="text-3xl font-bold text-[#154273] mb-12">Kies hier je module</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-white shadow-lg rounded-lg p-8 hover:shadow-2xl transition">
+                    <img src="../src/images/index2.png" alt="Cursussen" class="mx-auto mb-6 w-48">
+                    <a href="informatiehuishouding.html" class="bg-transparent border-2 border-[#154273] text-[#154273] py-2 px-16 rounded hover:bg-[#154273] hover:text-white transition-all">Cursussen</a>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="bg-white shadow-lg rounded-lg p-8 hover:shadow-2xl transition">
+                    <img src="../src/images/index3.png" alt="Bitty City" class="mx-auto mb-6 w-48">
+                    <a href="informatiehuishouding.html" class="bg-transparent border-2 border-[#154273] text-[#154273] py-2 px-16 rounded hover:bg-[#154273] hover:text-white transition-all">Bitty City</a>
+                </div>
+                
+                <!-- Card 3 -->
+                <div class="bg-white shadow-lg rounded-lg p-8 hover:shadow-2xl transition">
+                    <img src="../src/images/index4.png" alt="Tools & Tips" class="mx-auto mb-6 w-48">
+                    <a href="informatiehuishouding.html" class="bg-transparent border-2 border-[#154273] text-[#154273] py-2 px-16 rounded hover:bg-[#154273] hover:text-white transition-all">Tools & Tips</a>
+                </div>
             </div>
         </div>
-    </section>    
+    </section>
     
     <!-- Footer -->
     <footer class="bg-[#154273] text-white py-6 mt-auto">
