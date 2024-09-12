@@ -2,36 +2,43 @@
 <html lang="nl">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leerportaal</title>
-    <link rel="shortcut icon" href="../src/images/Logo_rijksoverheid.svg.png" type="image/x-icon">
-    <link href="../dist/output.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cursussen</title>
+  <link rel="shortcut icon" href="images/Logo_rijksoverheid.svg.png" type="image/x-icon">
+  <link href="../dist/output.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="../src/js/timer.js" defer></script>
 </head>
 
-<body class="bg-white flex flex-col min-h-screen">
-    <!-- Nav -->
-    <div class="flex items-center justify-center ml-48 mb-4 mt-4">
-        <a href="index.html" class="flex items-center">
-            <img src="../src/images/Logo_rijksoverheid.svg.png" alt="Logo" class="h-24 mr-4">
-        </a>
-        <div>
-            <h1 class="text-sm font-semibold text-gray-700">Dienst ICT Uitvoering</h1>
-            <p class="text-sm text-gray-500">Ministerie van Economische Zaken</p>
+<body class="flex flex-col min-h-screen">
+  
+  <!-- Navbar -->
+  <nav class="bg-white border-b border-gray-200">
+    <div class="container mx-auto flex items-center justify-center">
+      <!-- Logo -->
+      <a href="index.html">
+        <div class="flex items-center mb-4 ml-48">
+          <img src="images/Logo_rijksoverheid.svg.png" alt="Logo" class="h-24 mr-4">
+          <div>
+          </a>
+          <h1 class="text-sm font-semibold text-gray-700">Dienst ICT Uitvoering</h1>
+          <p class="text-sm text-gray-500">Ministerie van Economische Zaken</p>
         </div>
+      </div>
     </div>
+  </nav> 
     
-    <!-- Blue Line -->
     <div class="bg-[#154273] h-10"></div>
     
-    <!-- Hero Section -->
+    <!-- Hero  -->
     <section class="relative w-full h-[450px] bg-cover bg-center" style="background-image: url('../src/images/datacenter.webp');">
         <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
             <h1 class="text-5xl font-extrabold text-white">Welkom bij ons leerportaal</h1>
         </div>
     </section>
 
-    <!-- Cursus Informatiehuishouding Section -->
+    <!-- Cursus Informatiehuishouding  -->
     <section class="py-16 bg-white">
         <div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center px-6">
             <div>
@@ -45,7 +52,7 @@
                 <p class="text-gray-600 leading-relaxed mb-6">
                     Onmisbaar voor iedere professional die met informatie werkt. Verzeker jezelf van een voorsprong en begin vandaag!
                 </p>
-                <a href="#" class="inline-block bg-[#154273] text-white py-3 px-8 rounded shadow hover:bg-[#123660] transition duration-300">Meld je aan</a>
+                <a href="#" class="inline-block bg-[#154273] text-white py-1 px-8 rounded shadow hover:bg-[#123660] transition duration-300">Lees meer</a>
             </div>
             <div class="flex justify-center">
                 <img src="../src/images/index1.png" alt="Illustratie Informatiehuishouding" class="w-96 rounded shadow-lg">
@@ -53,7 +60,7 @@
         </div>
     </section>
 
-    <!-- Video Section -->
+    <!-- Video  -->
     <section class="bg-gray-100 py-16">
         <div class="container mx-auto text-center px-6">
             <h2 class="text-3xl font-bold text-[#154273] mb-4">Animatie video over het Leerhuis Informatiehuishouding</h2>
@@ -65,7 +72,7 @@
         </div>
     </section>
 
-    <!-- Modules Section -->
+    <!-- Modules  -->
     <section class="py-16">
         <div class="container mx-auto text-center px-6">
             <h2 class="text-3xl font-bold text-[#154273] mb-12">Kies hier je module</h2>
@@ -73,13 +80,13 @@
                 <!-- Card 1 -->
                 <div class="bg-white shadow-lg rounded-lg p-8 hover:shadow-2xl transition">
                     <img src="../src/images/index2.png" alt="Cursussen" class="mx-auto mb-6 w-48">
-                    <a href="informatiehuishouding.html" class="bg-transparent border-2 border-[#154273] text-[#154273] py-2 px-16 rounded hover:bg-[#154273] hover:text-white transition-all">Cursussen</a>
+                    <a href="cursussen.html" class="bg-transparent border-2 border-[#154273] text-[#154273] py-2 px-16 rounded hover:bg-[#154273] hover:text-white transition-all">Cursussen</a>
                 </div>
                 
                 <!-- Card 2 -->
                 <div class="bg-white shadow-lg rounded-lg p-8 hover:shadow-2xl transition">
                     <img src="../src/images/index3.png" alt="Bitty City" class="mx-auto mb-6 w-48">
-                    <a href="informatiehuishouding.html" class="bg-transparent border-2 border-[#154273] text-[#154273] py-2 px-16 rounded hover:bg-[#154273] hover:text-white transition-all">Bitty City</a>
+                    <a href="city.html" class="bg-transparent border-2 border-[#154273] text-[#154273] py-2 px-16 rounded hover:bg-[#154273] hover:text-white transition-all">Bitty City</a>
                 </div>
                 
                 <!-- Card 3 -->
@@ -94,7 +101,6 @@
     <!-- Footer -->
     <footer class="bg-[#154273] text-white py-6 mt-auto">
         <div class="container mx-auto flex justify-center space-x-40">
-            <!-- Left Section -->
             <div class="flex flex-col items-center">
                 <h2 class="font-semibold mb-2">Over deze site</h2>
                 <ul class="text-center">
@@ -104,7 +110,6 @@
                     <li><a href="#" class="text-sm hover:underline">Toegankelijkheid</a></li>
                 </ul>
             </div>
-            <!-- Right Section -->
             <div class="flex flex-col items-center">
                 <h2 class="font-semibold mb-2">Service</h2>
                 <ul class="text-center">

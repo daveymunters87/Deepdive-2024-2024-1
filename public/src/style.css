@@ -13,3 +13,31 @@
 .hero-banner {
     background-image: url(https://cdnb.artstation.com/p/assets/images/images/056/671/273/large/sarah-hennig-skyline.jpg?1669821740?auto=compress&cs=tinysrgb&h=750&w=1260);
 }
+
+#countdown-timer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f7fafc; /* Subtiele achtergrondkleur */
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Zachte schaduw */
+  }
+  
+  #countdown-timer div {
+    margin: 0 1rem;
+    text-align: center;
+  }
+  
+  #countdown-timer span {
+    display: block;
+    font-size: 1.5rem; /* Grotere cijfers */
+    font-weight: bold;
+    color: #154273; /* Kleur consistent met pagina */
+  }
+  
+  #countdown-timer .label {
+    font-size: 0.875rem; /* Kleinere tekst voor labels */
+    color: #4a5568; /* Subtiele grijze kleur */
+  }
+  

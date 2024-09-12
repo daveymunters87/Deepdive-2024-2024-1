@@ -7,10 +7,12 @@
   <title>Cursussen</title>
   <link rel="shortcut icon" href="images/Logo_rijksoverheid.svg.png" type="image/x-icon">
   <link href="../dist/output.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="../src/js/timer.js" defer></script>
 </head>
 
 <body class="flex flex-col min-h-screen">
-  
+
   <!-- Navbar -->
   <nav class="bg-white border-b border-gray-200">
     <div class="container mx-auto flex items-center justify-center">
@@ -19,95 +21,161 @@
         <div class="flex items-center mb-4 ml-48">
           <img src="images/Logo_rijksoverheid.svg.png" alt="Logo" class="h-24 mr-4">
           <div>
-          </a>
-          <h1 class="text-sm font-semibold text-gray-700">Dienst ICT Uitvoering</h1>
-          <p class="text-sm text-gray-500">Ministerie van Economische Zaken</p>
-        </div>
-      </div>
+      </a>
+      <h1 class="text-sm font-semibold text-gray-700">Dienst ICT Uitvoering</h1>
+      <p class="text-sm text-gray-500">Ministerie van Economische Zaken</p>
+    </div>
+    </div>
     </div>
     <div class="bg-[#154273] h-10"></div>
-  </nav> 
-  
-  <!-- Main Content -->
+  </nav>
+
+  <!-- Main -->
   <section class="max-w-screen-xl mx-auto py-12  my-8 lg:px-16">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
-      
-      <!-- Text Section -->
+
       <div>
-        <h1 class="text-3xl font-bold mb-4">Leer effectief omgaan met data binnen je organisatie en bouw aan je stad!</h1>
-        <p class="text-lg mb-6">In elke module leer je nieuwe stof. Na afloop maak je een toets waarbij je per goed beantwoorde vraag XP verdient. Met die XP verbeter je je stad en stijg je op de leaderboard. Hoe meer je leert, hoe groter en beter je stad wordt! Meld je nu aan en begin met leren én bouwen!</p>
+        <h1 class="text-3xl font-bold mb-4">Leer effectief omgaan met data binnen je organisatie en bouw aan je stad!
+        </h1>
+        <p class="text-lg mb-6">In elke module leer je nieuwe stof. Na afloop maak je een toets waarbij je per goed
+          beantwoorde vraag XP verdient. Met die XP verbeter je je stad en stijg je op de leaderboard. Hoe meer je
+          leert, hoe groter en beter je stad wordt! Meld je nu aan en begin met leren én bouwen!</p>
       </div>
-      
-      <!-- Image Section -->
+
       <div>
         <img src="../src/images/cursus1.png" alt="Learning illustration" class="ml-auto" width="350" height="30">
       </div>
     </div>
   </section>
-  
-  <!-- New Section: Introduction and Benefits -->
+
   <section class="bg-gray-100 py-12">
     <div class="max-w-screen-xl mx-auto px-4 lg:px-16 text-center">
       <h2 class="text-3xl font-bold mb-6">Waarom deelnemen aan deze cursussen?</h2>
-      <p class="text-lg text-gray-700 mb-8">De modules zijn essentieel voor medewerkers die willen groeien binnen hun organisatie en up-to-date willen blijven met de nieuwste IT-ontwikkelingen. Van informatiebeheer tot digitale veiligheid – deze cursussen bieden de kennis om succesvol te zijn.</p>
-      
+      <p class="text-lg text-gray-700 mb-8">De modules zijn essentieel voor medewerkers die willen groeien binnen hun
+        organisatie en up-to-date willen blijven met de nieuwste IT-ontwikkelingen. Van informatiebeheer tot digitale
+        veiligheid – deze cursussen bieden de kennis om succesvol te zijn.</p>
+
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <!-- Benefit 1 -->
         <div class="bg-white p-6 rounded-lg shadow-lg transition-transform duration-300 hover:scale-105">
           <h3 class="text-xl font-bold mb-2">Up-to-date Kennis</h3>
-          <p class="text-gray-600">Leer de laatste technieken en tools die cruciaal zijn voor een goed functionerende IT-afdeling binnen de overheid.</p>
+          <p class="text-gray-600">Leer de laatste technieken en tools die cruciaal zijn voor een goed functionerende
+            IT-afdeling binnen de overheid.</p>
         </div>
-        
-        <!-- Benefit 2 -->
+
         <div class="bg-white p-6 rounded-lg shadow-lg transition-transform duration-300 hover:scale-105">
           <h3 class="text-xl font-bold mb-2">Verhoogde Efficiëntie</h3>
-          <p class="text-gray-600">Vergroot je productiviteit door middel van efficiënte werkprocessen en het correct gebruik van web- en IT-services.</p>
+          <p class="text-gray-600">Vergroot je productiviteit door middel van efficiënte werkprocessen en het correct
+            gebruik van web- en IT-services.</p>
         </div>
-        
-        <!-- Benefit 3 -->
+
         <div class="bg-white p-6 rounded-lg shadow-lg transition-transform duration-300 hover:scale-105">
           <h3 class="text-xl font-bold mb-2">Veiligheid en Compliance</h3>
-          <p class="text-gray-600 mb-6">Begrijp hoe je de hoogste standaarden van informatiebeveiliging en compliance binnen jouw organisatie waarborgt.</p>
+          <p class="text-gray-600 mb-6">Begrijp hoe je de hoogste standaarden van informatiebeveiliging en compliance
+            binnen jouw organisatie waarborgt.</p>
         </div>
       </div>
     </div>
   </section>
 
-  
-  
-  <!-- Modules Section -->
+
+
+  <!-- Modules -->
   <section class="container mx-auto py-12 px-4 lg:px-16">
-    <h2 class="text-center text-2xl font-bold mb-12">Kies hier je module</h2>
-    
+    <h2 class="text-center text-3xl font-extrabold text-[#154273] mb-6">
+      <span class="relative inline-block">
+        Modules die een tijdelijke boost hebben
+        <span class="block h-1 bg-[#154273] mt-2"></span>
+      </span>
+    </h2>
+
+
+    <!-- Timer -->
+    <div class="text-center mb-6">
+      <p class="text-lg font-semibold text-[#154273] mb-4">Tijd tot module verversing:</p>
+      <div class="flex justify-center">
+        <div class="bg-gray-100 p-4 rounded-lg shadow-md flex items-center space-x-4">
+          <div class="text-center">
+            <span id="days" class="block text-2xl font-bold text-[#154273]">00</span>
+            <span class="text-sm text-gray-600">Dagen</span>
+          </div>
+          <div class="text-center">
+            <span id="hours" class="block text-2xl font-bold text-[#154273]">00</span>
+            <span class="text-sm text-gray-600">Uren</span>
+          </div>
+          <div class="text-center">
+            <span id="minutes" class="block text-2xl font-bold text-[#154273]">00</span>
+            <span class="text-sm text-gray-600">Minuten</span>
+          </div>
+          <div class="text-center">
+            <span id="seconds" class="block text-2xl font-bold text-[#154273]">00</span>
+            <span class="text-sm text-gray-600">Seconden</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
     <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
       <!-- Card 1 -->
-      <div class="text-center">
+      <div class="relative text-center course-card">
         <img src="../src/images/cursus2.png" alt="Informatie Huishouding" class="mx-auto mb-4" width="250" height="250">
+        <div
+          class="absolute top-0 left-0 mt-2 ml-2 bg-red-500 text-white px-2 py-1 rounded-lg text-xs font-bold flex items-center">
+          🔥 XP Boost!
+        </div>
         <h3 class="text-lg font-bold mb-2">Informatie Huishouding</h3>
-        <a href="informatiehuishouding.html" class="bg-transparent border-2 border-[#154273] text-[#154273] py-2 px-16 rounded hover:bg-[#154273] hover:text-white transition-all">Start!</a>
-    </div>
-      
-      <!-- Card 2 -->
-      <div class="text-center">
-        <img src="../src/images/cursus3.png" alt="App & Web Services" class="mx-auto mb-4" width="250" height="250">
-        <h3 class="text-lg font-bold mb-2">App & Web Services</h3>
-        <button class="bg-transparent border-2 border-[#154273] text-[#154273] py-2 px-16 rounded hover:bg-[#154273] hover:text-white transition-all">Start!</button>
+        <a href="informatiehuishouding.html"
+          class="bg-transparent border-2 border-[#154273] text-[#154273] py-2 px-16 rounded hover:bg-[#154273] hover:text-white transition-all">Start!</a>
       </div>
-      
+
+      <!-- Card 2 -->
+      <div class="relative text-center course-card">
+        <img src="../src/images/cursus3.png" alt="App & Web Services" class="mx-auto mb-4" width="250" height="250">
+        <div
+          class="absolute top-0 left-0 mt-2 ml-2 bg-red-500 text-white px-2 py-1 rounded-lg text-xs font-bold flex items-center">
+          🔥 XP Boost!
+        </div>
+        <h3 class="text-lg font-bold mb-2">App & Web Services</h3>
+        <button
+          class="bg-transparent border-2 border-[#154273] text-[#154273] py-2 px-16 rounded hover:bg-[#154273] hover:text-white transition-all">Start!</button>
+      </div>
+
       <!-- Card 3 -->
-      <div class="text-center">
-        <img src="../src/images/cursus4.png" alt="Identity & Access Management" class="mx-auto mb-4" width="250" height="250">
+      <div class="relative text-center course-card">
+        <img src="../src/images/cursus4.png" alt="Identity & Access Manage" class="mx-auto mb-4" width="250"
+          height="250">
+        <div
+          class="absolute top-0 left-0 mt-2 ml-2 bg-red-500 text-white px-2 py-1 rounded-lg text-xs font-bold flex items-center">
+          🔥 XP Boost!
+        </div>
         <h3 class="text-lg font-bold mb-2">Identity & Access Manage</h3>
-        <button class="bg-transparent border-2 border-[#154273] text-[#154273] py-2 mb-4 px-16 rounded hover:bg-[#154273] hover:text-white transition-all">Start!</button>
+        <button
+          class="bg-transparent border-2 border-[#154273] text-[#154273] py-2 px-16 rounded hover:bg-[#154273] hover:text-white transition-all">Start!</button>
       </div>
     </div>
   </section>
-  
-  
+
+  <div class="flex justify-center mb-14">
+    <button
+      class="bg-[#154273] text-white font-bold py-3 px-8 rounded-lg shadow-lg hover:bg-[#123660] transition-all duration-300 flex items-center space-x-2 hover:scale-105">
+      <span>Zie alle modules</span>
+      <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd"
+          d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+          clip-rule="evenodd"></path>
+      </svg>
+    </button>
+  </div>
+
+
+
+
+
+
   <!-- footer -->
   <footer class="bg-[#154273] text-white py-6 mt-auto">
     <div class="container mx-auto flex justify-center space-x-40">
-      <!-- Left Section -->
       <div class="flex flex-col items-center">
         <h2 class="font-semibold mb-2">Over deze site</h2>
         <ul class="text-center">
@@ -117,7 +185,6 @@
           <li><a href="#" class="text-sm hover:underline">Toegankelijkheid</a></li>
         </ul>
       </div>
-      <!-- Right Section -->
       <div class="flex flex-col items-center">
         <h2 class="font-semibold mb-2">Service</h2>
         <ul class="text-center">
@@ -126,8 +193,8 @@
       </div>
     </div>
   </footer>
-  
-  
+
+
 </body>
 
 </html>
